@@ -1,0 +1,1 @@
+void sieve(int n);
