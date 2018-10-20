@@ -3,18 +3,17 @@
 #include <stdlib.h>
 
 int sieve(int n) {
-    int size = 1.3 * n * log(n) + 10;
+    int size = 1.15 * n * log(n);
     int * nums = calloc(size, sizeof(*nums));
-    int nthprime = 0;
-    nums[0] = 1;
-    nums[1] = 1;
-
-    for(int i = 0; i < size; i++) {
+    int nthprime = 1;
+    nums[2] = 0;
+    int i;
+    for(i = 3; i< size; i+=2) {
         if(nums[i] == 1) {
             continue;
         } else {
             nums[i] = 0;
-            nthprime += 1;
+            nthprime += 1; 
             if(nthprime == n){
                 return i;
             }
