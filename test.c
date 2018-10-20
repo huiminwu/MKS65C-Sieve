@@ -5,7 +5,7 @@
 //first param is the number, second param is the num of iterations
 //int main(int argc, char * argv[]){
 int main() {
-    sieve(18);
+    sieve(23);
     return 0;
 }
 //  int iterations = 1;
